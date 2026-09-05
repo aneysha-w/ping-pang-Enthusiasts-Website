@@ -1,0 +1,38 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application:
+    name: pingpong-platform
+  datasource:
+    url: jdbc:h2:file:./data/pingpong;DB_CLOSE_DELAY=-1;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+
+app:
+  init-score: 1000
+  session-ttl-days: 7
+  sms-code-ttl-minutes: 5
+  avatar-max-size-mb: 2
+  logo-max-size-mb: 1
+  event-min-players: 4
+  event-max-players: 256
+  enroll-deadline-lead-hours: 1
+  admin:
+    account: admin
+    password: admin123

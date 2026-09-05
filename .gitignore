@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+target/
+*.jar
+*.war
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Data
+backend/data/
+backend-node/data/
+*.h2.db
+*.lock.db
+
+# Logs
+*.log
+backend-node/startup.log
+backend-node/error.log
+
+# Env
+.env
+.env.local
